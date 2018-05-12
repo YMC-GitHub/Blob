@@ -6,7 +6,6 @@
 
 *	[开发手册](#开发手册)
 *	[使用手册](#使用手册)
-*	[模板语法](#模板语法)
 
 ## 开发手册
 
@@ -126,6 +125,15 @@ template.version = '3.0.0';
 ```
 
 ## 使用手册
+### 安装
+```
+方式1：
+npm install art-template --save
+
+方式2：
+<script src="lib/template-web.js"></script>
+
+```
 
 ### 编写模板
 
