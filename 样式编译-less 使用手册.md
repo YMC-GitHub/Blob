@@ -231,28 +231,28 @@ filter:~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
 # 特效
 ## 圆角半径
 ```less
-.border-radius((@topleft:5px, @topright:5px, @bottomleft:
-5px, @bottomright:5px)){
+.border-radius((@topleft:5px; @topright:5px; @bottomleft:
+5px; @bottomright:5px)){
   border-radius:@topleft @topright @bottomright @bottomleft;
 }
 ```
 
 ## 方块阴影
 ```less
-.box-shadow(@x:0px, @y:3px, @blur:5px, @alpha:0.5){
+.box-shadow(@x:0px; @y:3px; @blur:5px; @alpha:0.5){
   box-shadow:@x @y @blur rgba(0,0,0,@alpha);
 }
 ```
 ## 过渡效果
 ```less
-.transition(@prop:all, @time:1s, @ease:linear){
+.transition(@prop:all; @time:1s; @ease:linear){
   transition:@prop @time @ease;
 }
 ```
 
 ## 转换变换
 ```less
-.transform(@rotate:90deg, @scale:1, @skew:1deg, @translate:
+.transform(@rotate:90deg; @scale:1; @skew:1deg; @translate:
 10px){
   transform:rotate(@rotate) scale(@scale) skew(@skew) translate(@translate);
 }
@@ -260,7 +260,7 @@ filter:~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
 
 ## 线性渐变
 ```less
-.gradient(@origin:left, @start:#ffffff, @stop:#000000){
+.gradient(@origin:left; @start:#ffffff; @stop:#000000){
   background-color:@start;
   background-image:linear-gradient(@origin,@start,@stop);
 }
@@ -268,7 +268,7 @@ filter:~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
 
 ## 快速渐变
 ```less
-.quick-gradient(@origin:left,@alpha:0.2){
+.quick-gradient(@origin:left;@alpha:0.2){
   background-image:linear-gradient(@origin,rgba(0,0,0,0.0),rgba(0,0,0,@alpha));
 
 }
@@ -276,7 +276,7 @@ filter:~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
 
 ## 镜像效果
 ```less
-.reflect(@length:50%,@opacity:0.2){
+.reflect(@length:50%;@opacity:0.2){
   -webkit-box-reflect:below 0px -webkit-gradient(linear,left top,left bottom,from(transparent),color-stop(@length,
 transparent),to(rgba(255,255,255,@opacity)));
 }
@@ -371,7 +371,7 @@ lessc bootstrap.less bootstrap.css
 # 形状
 ## 正方形
 ```less
-.shape-square(@sp-sq-width:100px,@sp-sq-height:100px,@sp-sq-color:red) {
+.shape-square(@sp-sq-width:100px;@sp-sq-height:100px;@sp-sq-color:red) {
     width: @sp-sq-width;
     height: @sp-sq-height;
     background: @sp-sq-c;
@@ -380,7 +380,7 @@ lessc bootstrap.less bootstrap.css
 
 ## 矩形
 ```less
-.shape-rectangle(@sp-re-width:200px,@sp-re-height:100px,@sp-re-color:red) {
+.shape-rectangle(@sp-re-width:200px;@sp-re-height:100px;@sp-re-color:red) {
     width: @sp-re-width;
     height: @sp-re-height;
     background: @sp-re-c;
@@ -389,7 +389,7 @@ lessc bootstrap.less bootstrap.css
 
 ## 圆形
 ```less
-.shape-circle(@sp-ci-width:100px,@sp-ci-height:100px,@sp-ci-color:red) {
+.shape-circle(@sp-ci-width:100px;@sp-ci-height:100px;@sp-ci-color:red) {
     width: @sp-ci-width;
     height: @sp-ci-height;
     background: @sp-ci-c;
@@ -399,7 +399,7 @@ lessc bootstrap.less bootstrap.css
 
 ## 椭圆
 ```less
-.shape-oval(@sp-ov-width:200px,@sp-ov-height:100px,@sp-ov-color:red) {
+.shape-oval(@sp-ov-width:200px;@sp-ov-height:100px;@sp-ov-color:red) {
     width: @sp-ov-width;
     height: @sp-ov-height;
     background: @sp-ov-c;
@@ -410,7 +410,7 @@ lessc bootstrap.less bootstrap.css
 ## 三角
 ```less
 //向上
-.shape-triangle-up(@sp-tu-left:50px,@sp-tu-right:50px,@sp-tu-bottom:100px,@sp-tu-color:red) {
+.shape-triangle-up(@sp-tu-left:50px;@sp-tu-right:50px;@sp-tu-bottom:100px;@sp-tu-color:red) {
     width: 0;
     height: 0;
 		border-left: @sp-tu-left solid transparent;
@@ -418,7 +418,7 @@ lessc bootstrap.less bootstrap.css
     border-bottom: @sp-tu-bottom solid @sp-tu-color;    
 }
 //向下
-.shape-triangle-down(@sp-td-left:50px,@sp-td-right:50px,@sp-td-top:100px,@sp-td-color:red) {
+.shape-triangle-down(@sp-td-left:50px;@sp-td-right:50px;@sp-td-top:100px;@sp-td-color:red) {
     width: 0;
     height: 0;
 		border-left: @sp-td-left solid transparent;
@@ -426,7 +426,7 @@ lessc bootstrap.less bootstrap.css
     border-top: @sp-td-top solid @sp-td-color;    
 }
 //向左
-.shape-triangle-left(@sp-tl-top:50px,@sp-tl-bottom:50px,@sp-tl-right:100px,@sp-tl-color:red) {
+.shape-triangle-left(@sp-tl-top:50px;@sp-tl-bottom:50px;@sp-tl-right:100px;@sp-tl-color:red) {
     width: 0;
     height: 0;
     border-top: @sp-tl-top solid transparent;    
@@ -435,7 +435,7 @@ lessc bootstrap.less bootstrap.css
     
 }
 //向右
-.shape-triangle-right(@sp-tr-top:50px,@sp-tr-bottom:50px,@sp-tr-left:100px,@sp-tr-color:red) {
+.shape-triangle-right(@sp-tr-top:50px;@sp-tr-bottom:50px;@sp-tr-left:100px;@sp-tr-color:red) {
     width: 0;
     height: 0;
     border-top: @sp-tr-top solid transparent;    
@@ -443,28 +443,28 @@ lessc bootstrap.less bootstrap.css
     border-left: @sp-tr-left solid @sp-tr-color;
 }
 //左上
-.shape-triangle-topleft(@sp-ttl-top:100px,@sp-ttl-right:100px,@sp-ttl-color:red) {
+.shape-triangle-topleft(@sp-ttl-top:100px;@sp-ttl-right:100px;@sp-ttl-color:red) {
     width: 0;
     height: 0;
     border-top: @sp-ttl-top solid @sp-ttl-color;    
 		border-right: @sp-ttl-right solid transparent;
 }
 //右上
-.shape-triangle-topright(@sp-ttr-top:100px,@sp-ttr-left:100px,@sp-ttr-color:red) {
+.shape-triangle-topright(@sp-ttr-top:100px;@sp-ttr-left:100px;@sp-ttr-color:red) {
     width: 0;
     height: 0;
     border-top: @sp-ttr-top solid @sp-ttr-color;    
 		border-left: @sp-ttr-left solid transparent;
 }
 //左下
-.shape-triangle-bottomleft(@sp-tbl-bottom:100px,@sp-tbl-right:100px,@sp-tbl-color:red) {
+.shape-triangle-bottomleft(@sp-tbl-bottom:100px;@sp-tbl-right:100px;@sp-tbl-color:red) {
     width: 0;
     height: 0;
     border-bottom: @sp-tbl-bottom solid @sp-tbl-color;    
 		border-right: @sp-tbl-right solid transparent;
 }
 //右下
-.shape-triangle-bottomright(@sp-tbr-bottom:100px,@sp-tbr-left:100px,@sp-tbr-color:red) {
+.shape-triangle-bottomright(@sp-tbr-bottom:100px;@sp-tbr-left:100px;@sp-tbr-color:red) {
     width: 0;
     height: 0;
     border-bottom: @sp-tbr-bottom solid @sp-tbr-color;    
@@ -490,7 +490,7 @@ lessc bootstrap.less bootstrap.css
 ## 月亮
 ## 十字架
 ```less
-.shape-cross(@sp-cr-width:20px,@sp-cr-height:100px,@sp-cr-color:red){
+.shape-cross(@sp-cr-width:20px;@sp-cr-height:100px;@sp-cr-color:red){
   background: @sp-cr-color;
   height: @sp-cr-height;
   position: relative;
