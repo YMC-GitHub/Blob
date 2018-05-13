@@ -31,7 +31,6 @@ less 使用手册
 	- [导入](#导入)
 		- 后缀可带
 		- 跳过处理
-	- [避编](#避编)		
 	- [注释](#注释)
 - [特效](#特效)
 	- [圆角半径](#圆角半径)
@@ -48,7 +47,30 @@ less 使用手册
 	- 命令行方式
 	- 服务端方式
 	- 客户端方式
-	
+- [形状](#形状)
+	- [正方形](#正方形)
+	- [矩形](#矩形)
+	- [圆形](#圆形)
+	- [椭圆](#椭圆)
+	- [三角](#三角)
+	- [弯尾箭头](#弯尾箭头)
+	- [梯形](#梯形)
+	- [平行四边形](#平行四边形)
+	- [六角星](#六角星)
+	- [五角星](#五角星)
+	- [五边形](#五边形)
+	- [六边形](#六边形)
+	- [八边形](#八边形)
+	- [心形](#心形)
+	- [菱形](#菱形)
+	- [钻石](#钻石)
+	- [鸡蛋](#鸡蛋)
+	- [聊框](#聊框)
+	- [放大镜](#放大镜)
+	- [圆锥形](#圆锥形)
+	- [月亮](#月亮)
+	- [十字架](#十字架)
+- [参考](#参考)
 # 语法
 
 ## 变量
@@ -189,7 +211,7 @@ border-bottom:solid 2px black;
 @import"lib.css";
 ```
 
-## 避编
+## 编译
 ### 跳过编译
 ```
 filter:~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
@@ -346,5 +368,143 @@ lessc bootstrap.less bootstrap.css
 |--compress|-x|压缩-移除空格|Compresses output by removing some whitespaces|
 |--plugin=PLUGIN=OPTIONS|——|压缩-使用插件| Loads a plugin|
 
+# 形状
+## 正方形
+```less
+.shape-square(@sp-sq-width:100px,@sp-sq-height:100px,@sp-sq-color:red) {
+    width: @sp-sq-width;
+    height: @sp-sq-height;
+    background: @sp-sq-c;
+}
+```
 
+## 矩形
+```less
+.shape-rectangle(@sp-re-width:200px,@sp-re-height:100px,@sp-re-color:red) {
+    width: @sp-re-width;
+    height: @sp-re-height;
+    background: @sp-re-c;
+}
+```
 
+## 圆形
+```less
+.shape-circle(@sp-ci-width:100px,@sp-ci-height:100px,@sp-ci-color:red) {
+    width: @sp-ci-width;
+    height: @sp-ci-height;
+    background: @sp-ci-c;
+    border-radius: 50%;
+}
+```
+
+## 椭圆
+```less
+.shape-oval(@sp-ov-width:200px,@sp-ov-height:100px,@sp-ov-color:red) {
+    width: @sp-ov-width;
+    height: @sp-ov-height;
+    background: @sp-ov-c;
+    border-radius: @sp-ov-width/@sp-ov-height;
+}
+```
+
+## 三角
+```less
+//向上
+.shape-triangle-up(@sp-tu-left:50px,@sp-tu-right:50px,@sp-tu-bottom:100px,@sp-tu-color:red) {
+    width: 0;
+    height: 0;
+		border-left: @sp-tu-left solid transparent;
+    border-right: @sp-tu-right solid transparent;
+    border-bottom: @sp-tu-bottom solid @sp-tu-color;    
+}
+//向下
+.shape-triangle-down(@sp-td-left:50px,@sp-td-right:50px,@sp-td-top:100px,@sp-td-color:red) {
+    width: 0;
+    height: 0;
+		border-left: @sp-td-left solid transparent;
+    border-right: @sp-td-right solid transparent;
+    border-top: @sp-td-top solid @sp-td-color;    
+}
+//向左
+.shape-triangle-left(@sp-tl-top:50px,@sp-tl-bottom:50px,@sp-tl-right:100px,@sp-tl-color:red) {
+    width: 0;
+    height: 0;
+    border-top: @sp-tl-top solid transparent;    
+		border-bottom: @sp-tl-left solid transparent;
+    border-right: @sp-tl-right solid @sp-tl-color;
+    
+}
+//向右
+.shape-triangle-right(@sp-tr-top:50px,@sp-tr-bottom:50px,@sp-tr-left:100px,@sp-tr-color:red) {
+    width: 0;
+    height: 0;
+    border-top: @sp-tr-top solid transparent;    
+		border-bottom: @sp-tr-left solid transparent;
+    border-left: @sp-tr-left solid @sp-tr-color;
+}
+//左上
+.shape-triangle-topleft(@sp-ttl-top:100px,@sp-ttl-right:100px,@sp-ttl-color:red) {
+    width: 0;
+    height: 0;
+    border-top: @sp-ttl-top solid @sp-ttl-color;    
+		border-right: @sp-ttl-right solid transparent;
+}
+//右上
+.shape-triangle-topright(@sp-ttr-top:100px,@sp-ttr-left:100px,@sp-ttr-color:red) {
+    width: 0;
+    height: 0;
+    border-top: @sp-ttr-top solid @sp-ttr-color;    
+		border-left: @sp-ttr-left solid transparent;
+}
+//左下
+.shape-triangle-bottomleft(@sp-tbl-bottom:100px,@sp-tbl-right:100px,@sp-tbl-color:red) {
+    width: 0;
+    height: 0;
+    border-bottom: @sp-tbl-bottom solid @sp-tbl-color;    
+		border-right: @sp-tbl-right solid transparent;
+}
+//右下
+.shape-triangle-bottomright(@sp-tbr-bottom:100px,@sp-tbr-left:100px,@sp-tbr-color:red) {
+    width: 0;
+    height: 0;
+    border-bottom: @sp-tbr-bottom solid @sp-tbr-color;    
+		border-left: @sp-tbr-right solid transparent;
+}
+```
+
+## 弯尾箭头
+## 梯形
+## 平行四边形
+## 六角星
+## 五角星
+## 五边形
+## 六边形
+## 八边形
+## 心形
+## 菱形
+## 钻石
+## 鸡蛋
+## 聊框
+## 放大镜
+## 圆锥形
+## 月亮
+## 十字架
+```less
+.shape-cross(@sp-cr-width:20px,@sp-cr-height:100px,@sp-cr-color:red){
+  background: @sp-cr-color;
+  height: @sp-cr-height;
+  position: relative;
+  width: @sp-cr-width;
+
+  &:after {
+  background: @sp-cr-color;
+  content: "";
+  height: @sp-cr-width;
+  left: -(@sp-cr-height-@sp-cr-width)/2;
+  position: absolute;
+  top: (@sp-cr-height-@sp-cr-width)/2;
+  width: @sp-cr-height;
+  }
+}
+```
+# 参考
