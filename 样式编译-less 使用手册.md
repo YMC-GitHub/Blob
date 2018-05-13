@@ -31,6 +31,7 @@ less 使用手册
 	- [导入](#导入)
 		- 后缀可带
 		- 跳过处理
+	- [避编](#避编)		
 	- [注释](#注释)
 - [特效](#特效)
 	- [圆角半径](#圆角半径)
@@ -188,7 +189,7 @@ border-bottom:solid 2px black;
 @import"lib.css";
 ```
 
-## 编译
+## 避编
 ### 跳过编译
 ```
 filter:~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
