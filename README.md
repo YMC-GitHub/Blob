@@ -1,6 +1,6 @@
 # 前端工程
 
-> 以网页的方式查看，请点击[这里](https://ymc-github.github.io/blob)
+> 以网页的方式查看，请点击[这里](https://ymc-github.github.io/Blob/)
 
 - [前端后端分离模式](前端后端分离模式.md)
 - [前端工程化几阶段](前端工程化几阶段.md)
